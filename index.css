@@ -1,0 +1,118 @@
+:root {
+  --brown: #393d3f;
+  --white: #fdfdff;
+  --tan: #c6c5b9;
+  --green: #62929e;
+  --darkgreen: #546a7b;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--white);
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.listitems {
+  margin: 0.5rem;
+  text-align: left;
+  list-style: none;
+}
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.table_top {
+  background: var(--tan);
+  letter-spacing: 2px;
+}
+
+.table_header {
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+}
+
+.testClass:hover {
+  background: var(--tan);
+}
+
+.tiertwocolor {
+  background: var(--green);
+  color: var(--white);
+}
+
+.tierthreecolor {
+  background: var(--brown);
+  color: var(--white);
+}
+
+.tierone,
+.tiertwo,
+.tierthree {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.tierone > table {
+  border: 2px solid var(--tan);
+}
+
+.tierone tr:hover {
+  background: var(--tan);
+}
+
+.tiertwo tr:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+.tierthree tr:hover {
+  background: var(--brown);
+  color: var(--white);
+}
+
+.tiertwo > table {
+  border: 2px solid var(--darkgreen);
+}
+
+.tierthree > table {
+  border: 2px solid var(--brown);
+}
+
+/* Typography */
+h1 {
+  margin: 2rem 0;
+}
+
+h2 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* media queries */
+@media (max-width: 560px) {
+  .container {
+    overflow-x: auto;
+  }
+
+  .tierone,
+  .tiertwo,
+  .tierthree {
+    display: block;
+  }
+}
